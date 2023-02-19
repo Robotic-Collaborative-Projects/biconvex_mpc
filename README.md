@@ -1,6 +1,6 @@
 # BiConMP
 
-This repository is the implentation of the BiConMP solver. The BiConMP is an online whole body trajectory optimizer for legged robots. The trajectory optimizer has generated various dyanmic behaviorus on Quadrupeds (Solo12, AnYmal), Humanoids (Talos)...
+This repository is the implentation of the BiConMP solver. The BiConMP is an online whole body trajectory optimizer for legged robots. The trajectory optimizer has generated various dyanmic behaviorus on Quadrupeds (Solo12, AnYmal, Unitree B1), Humanoids (Talos)...
 
 ## Dependencies
 ### Required
