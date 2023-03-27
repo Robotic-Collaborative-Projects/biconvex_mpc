@@ -25,8 +25,8 @@ v0 = pin.utils.zero(pin_robot.model.nv)
 x0 = np.concatenate([q0, pin.utils.zero(pin_robot.model.nv)])
 f_arr = ["FL_FOOT", "FR_FOOT", "HL_FOOT", "HR_FOOT"]
 
-v_des = np.array([0.5,0.0,0.0])
-w_des = 0.0
+v_des = np.array([0.0,0.0,0.0])
+w_des = 0.7
 
 plan_freq = 0.05 # sec
 update_time = 0.0 # sec (time of lag)
@@ -51,7 +51,7 @@ plot_time = 0 #Time to start plotting
 
 solve_times = []
 
-for o in range(int(150*(plan_freq/sim_dt))):
+for o in range(int(750*(plan_freq/sim_dt))):
     # this bit has to be put in shared memory
     q, v = robot.get_state()
     

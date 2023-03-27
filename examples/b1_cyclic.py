@@ -29,8 +29,8 @@ v0 = pin.utils.zero(pin_robot.model.nv)
 x0 = np.concatenate([q0, pin.utils.zero(pin_robot.model.nv)])
 f_arr = ["LF_FOOT", "LH_FOOT", "RF_FOOT", "RH_FOOT"]
 
-v_des = np.array([0.5,0.0,0.0])
-w_des = 0.000
+v_des = np.array([0.0,0.0,0.0])
+w_des = 0.01
 
 plan_freq = 0.05 # sec
 update_time = 0.02 # sec (time of lag)

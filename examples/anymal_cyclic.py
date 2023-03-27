@@ -28,8 +28,8 @@ v0 = pin.utils.zero(pin_robot.model.nv)
 x0 = np.concatenate([q0, pin.utils.zero(pin_robot.model.nv)])
 f_arr = ["LF_FOOT", "LH_FOOT", "RF_FOOT", "RH_FOOT"]
 
-v_des = np.array([0.2,0.0,0.0])
-w_des = 0.0
+v_des = np.array([0.1,0.1,0.0])
+w_des = 0.00
 
 plan_freq = 0.05 # sec
 update_time = 0.0 # sec (time of lag)
@@ -102,7 +102,7 @@ for o in range(int(450*(plan_freq/sim_dt))):
     # tau = robot_id_ctrl.id_joint_torques(q, v, q0, v0, v0, np.zeros(12), contact_configuration)
     robot.send_joint_command(tau)
 
-    time.sleep(0.0005)
+    # time.sleep(0.0005)
     sim_t += sim_dt
     pln_ctr = int((pln_ctr + 1)%(plan_freq/sim_dt))
     index += 1
