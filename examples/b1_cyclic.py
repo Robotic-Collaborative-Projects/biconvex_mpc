@@ -61,6 +61,16 @@ solve_times = []
 for o in range(int(4500*(plan_freq/sim_dt))):
     # this bit has to be put in shared memory
     q, v = robot.get_state()
+    R = pin.Quaternion(np.array(q[3:7])).toRotationMatrix()
+    rpy_vector = pin.rpy.matrixToRpy(R)
+    rpy_vector[2] = 0.0
+    fake_quat = pin.Quaternion(pin.rpy.rpyToMatrix(rpy_vector))
+
+    q[3] = fake_quat[0]
+    q[4] = fake_quat[1]
+    q[5] = fake_quat[2]
+    q[6] = fake_quat[3]
+    
     contact_configuration = robot.get_current_contacts()
 
     if o == int(100*(plan_freq/sim_dt)):
