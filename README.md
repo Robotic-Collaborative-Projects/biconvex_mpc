@@ -19,7 +19,7 @@ This repository is the implentation of the BiConMP solver. The BiConMP is an onl
 ### Step 1
 
 ```
-git clone --recurse-submodules git@github.com:machines-in-motion/biconvex_mpc.git
+git clone --recurse-submodules git@github.com:Robotic-Collaborative-Projects/biconvex_mpc.git
 cd biconvex_mpc
 mkdir build && cd build
 cmake .. -DCMAKE_BUILD_TYPE=Release
